@@ -1,2 +1,2 @@
 # dbt-scooters
-Project for study dbt (inzhenerka.tech)
+Project for study dbt+dagster (inzhenerka.tech)

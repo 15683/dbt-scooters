@@ -1,0 +1,31 @@
+version: 2
+
+sources:
+  - name: scooters_raw
+    description: "Сырые данные из системы скутеров"
+    database: "{{ target.database }}"
+    schema: scooters_raw
+    tables:
+      - name: trips
+        description: "Таблица поездок"
+        columns:
+          - name: id
+            description: "ID поездки"
+          - name: user_id
+            description: "ID пользователя"
+          - name: started_at
+            description: "Время начала поездки"
+          - name: finished_at
+            description: "Время завершения поездки"
+          - name: price
+            description: "Цена в копейках"
+          - name: distance
+            description: "Дистанция в метрах"
+
+      - name: users
+        description: "Таблица пользователей"
+        columns:
+          - name: id
+            description: "ID пользователя"
+          - name: birth_date
+            description: "Дата рождения"
