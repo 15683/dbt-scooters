@@ -25,7 +25,7 @@ with trip_stats as (
         count(*) as trips,
         count(distinct user_id) as users,
         avg(extract(epoch from (finished_at - started_at))) / 60 as avg_duration_m,
-        sum(price) / 100.0 as revenue_rub,
+        sum(price) / 100 as revenue_rub,
         count(case when price = 0 then 1 end) as free_trips,
         count(*) as total_trips
     from {{ source('scooters_raw', 'trips') }}
